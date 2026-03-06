@@ -139,7 +139,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
@@ -1627,3 +1628,4 @@ margin-bottom:15px;
 font-size:1.3rem;
 opacity:0.8;
 }
+

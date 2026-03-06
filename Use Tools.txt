@@ -1,5 +1,9 @@
-Web Hosting : GITHUB
+Web Hosting : GitHub Pages
 
+Version Control : Git 
+
+Repository : GitHub
+ 
 web design : Html , Css , Js
 
 Domain : Godaddy
