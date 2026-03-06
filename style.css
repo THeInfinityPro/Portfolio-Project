@@ -1535,3 +1535,95 @@ body {
     }
 }
 
+.certifications-section{
+padding-top:140px;
+text-align:center;
+}
+
+.cert-title{
+font-size: 3.9rem;
+color:#d96b6b;
+margin-bottom:50px;
+}
+
+.cert-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:12px;
+transition:0.3s ease;
+}
+
+.cert-card img{
+width:200px;
+margin-bottom:15px;
+}
+
+.cert-card h3{
+font-size:2rem;
+margin-bottom:8px;
+color: #d96b6b;
+}
+
+.cert-card p{
+font-size:1.5rem;
+opacity:0.8;
+color:#d96b6b;
+}
+
+.cert-card:hover{
+transform:translateY(-6px);
+border-color:#d96b6b;
+}
+
+.cert-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.cert-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.projects-section{
+padding-top:140px;
+text-align:center;
+}
+
+.projects-title{
+font-size:3rem;
+color:#d96b6b;
+margin-bottom:50px;
+}
+
+.projects-coming{
+max-width:600px;
+margin:auto;
+padding:50px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.03);
+}
+
+.projects-coming i{
+font-size:3rem;
+color:#d96b6b;
+margin-bottom:20px;
+}
+
+.projects-coming h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.projects-coming p{
+font-size:1.3rem;
+opacity:0.8;
+}

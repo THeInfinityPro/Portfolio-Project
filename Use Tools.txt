@@ -1,4 +1,4 @@
-Web Hosting : Zoho Catalyst
+Web Hosting : GITHUB
 
 web design : Html , Css , Js
 
