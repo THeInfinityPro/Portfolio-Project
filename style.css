@@ -111,7 +111,6 @@
   transform: translateX(0);
 }
 
-#nav-menu.open { transform: translateX(0); }
 
 
 html {
@@ -126,6 +125,7 @@ body {
   overflow-x: hidden;
   display: block;
 }
+
 
 /* =======================
    HEADER & NAVIGATION
@@ -156,19 +156,35 @@ header {
   transform: scale(1.1);
 }
 
-nav a {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: white;
-  margin-left: 4rem;
-  transition: .3s ease;
-  border-bottom: 3px solid transparent;
+nav a{
+  font-size:1.8rem;
+  font-weight:500;
+  color:white;
+  margin-left:4rem;
+  position:relative;
+  transition:.3s ease;
+}
+
+/* underline animation */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:2px;
+  background:#b74b4b;
+  transition:0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after{
+  width:100%;
 }
 
 nav a:hover,
-nav a.active {
-  color: #b74b4b;
-  border-bottom: 3px solid #b74b4b;
+nav a.active{
+  color:#b74b4b;
 }
 
 /* HAMBURGER HIDDEN DESKTOP */
@@ -486,13 +502,6 @@ nav a:hover {
   align-items: center;
   min-height: 100vh;   /* fills screen height */
 }
-
-/* Make sure body doesn't push weirdly */
-body {
-  display: flex;
-  justify-content: center;
-}
-
 /* Click outside of silde panel need to close */
 
 #overlay {
@@ -612,9 +621,11 @@ body {
 @media (min-width: 1024px) {
   .services-section, .skills-section, .education-section, .experience-section, .contact-section {
     font-size: 1.8rem;
-    width: 60%;
+    width: 100%;
+    max-width: 1100px;
     margin: 6rem auto;
     line-height: 1.9;
+    padding: 0 20px;
   }
 
   .services-section h2 {
@@ -1285,7 +1296,8 @@ body {
 
 .experience {
     padding: 100px 0;
-    width: 70%;
+    width: 100%;
+    max-width: 1100px;
     margin: auto;
     color: white;
 }
@@ -1341,7 +1353,8 @@ body {
 
 /* Center each experience block */
 .exp-box {
-    width: 60%;
+    width: 100%;
+    max-width: 900px;
     text-align: left;
     margin-bottom: 60px;
 }
@@ -1629,3 +1642,109 @@ font-size:1.3rem;
 opacity:0.8;
 }
 
+@media (max-width: 768px){
+
+section{
+padding: 100px 6%;
+}
+
+header{
+padding: 1rem 6%;
+}
+
+}
+
+@media (max-width:768px){
+
+section{
+width:100%;
+max-width:100%;
+margin:0;
+padding:100px 20px;
+}
+
+.certifications-section{
+width:100%;
+}
+
+}
+
+body{
+width:100%;
+max-width:100%;
+margin:0;
+padding:0;
+background:black;
+}
+
+section{
+width:100%;
+max-width:100%;
+}
+
+.certifications-section{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:140px 20px;
+}
+
+@media (max-width:768px){
+
+.services-section,
+.skills-section,
+.education-section,
+.experience-section,
+.contact-section,
+.certifications-section,
+.projects-section{
+width:100%;
+max-width:100%;
+margin:0;
+padding:120px 20px;
+}
+
+}
+
+/* FIX SIDE SPACE ON MOBILE */
+@media (max-width:768px){
+
+body{
+width:100%;
+margin:0;
+padding:0;
+}
+
+section,
+.home,
+.about-section,
+.skills-section,
+.services-section,
+.experience,
+.contact,
+.certifications-section,
+.projects-section{
+width:100% !important;
+max-width:100% !important;
+margin:0 !important;
+padding:100px 20px !important;
+}
+
+}
+
+html, body{
+overflow-x:hidden;
+width:100%;
+}
+
+@media (max-width:768px){
+
+section{
+padding:120px 20px !important;
+}
+
+}
+
+.home{
+min-height:100vh;
+}
