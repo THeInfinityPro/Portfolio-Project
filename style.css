@@ -1748,3 +1748,227 @@ padding:120px 20px !important;
 .home{
 min-height:100vh;
 }
+
+//* ================= PROJECT SECTION ================= */
+
+.projects-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-title {
+    font-size: 3.2rem;
+    color: #b74b4b;
+    margin-bottom: 40px;
+}
+
+/* LAYOUT */
+.projects-split {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* ================= CARD ================= */
+
+.project-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-height: 120px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid rgba(255, 77, 77, 0.25);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* GLOW BORDER */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(45deg, transparent, #ff4d4d, transparent);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* CLEAN HOVER (NO SCALE BUG) */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(255, 77, 77, 0.5);
+    z-index: 10;
+}
+
+/* TITLE */
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #b74b4b;
+    margin-bottom: 10px;
+}
+
+/* ICON */
+.project-card::after {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+/* ================= HIDDEN CONTENT ================= */
+
+.project-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    transform: translateY(10px);
+    text-align: left;
+}
+
+/* SHOW CONTENT */
+.project-card:hover > .project-hidden {
+    max-height: 1200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXT */
+.project-hidden p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* LABEL */
+.label {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff4d4d;
+}
+
+/* ================= TOOLS ================= */
+
+.tools {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tools span {
+    background: rgba(255,77,77,0.1);
+    border: 1px solid rgba(255,77,77,0.3);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #ff4d4d;
+    transition: 0.3s;
+}
+
+.tools span:hover {
+    background: #ff4d4d;
+    color: black;
+}
+
+/* ================= PIPELINE FLOW ================= */
+
+.flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.flow span {
+    position: relative;
+    background: rgba(255,77,77,0.1);
+    border: 1px solid rgba(255,77,77,0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #ff4d4d;
+}
+
+.flow span::after {
+    content: "→";
+    position: absolute;
+    right: -14px;
+}
+
+.flow span:last-child::after {
+    content: "";
+}
+
+/* ================= BUTTON ================= */
+
+.project-hidden a {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    transition: 0.3s;
+}
+
+.project-hidden a:hover {
+    background: #ff4d4d;
+    color: black;
+    box-shadow: 0 0 15px #ff4d4d;
+}
+
+/* ================= DULL EFFECT ================= */
+
+.projects-split:hover .project-card:not(:hover) {
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .projects-split {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .project-card {
+        max-width: 95%;
+        padding: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-hidden p {
+        font-size: 13px;
+    }
+
+    .tools span,
+    .flow span {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+}

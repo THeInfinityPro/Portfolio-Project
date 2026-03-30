@@ -9,51 +9,150 @@
     <meta name="author" content="Jagadish V">
     <title>Projects | Jagadish V</title>
 </head>
-<body>
-       <header>
-        <a href="ProfileCard.html" class="logo">About Me</a>
 
-                    <!-- DESKTOP NAV -->
+<body>
+
+<header>
+    <a href="ProfileCard.html" class="logo">About Me</a>
+
+    <!-- DESKTOP NAV -->
     <nav class="desktop-nav">
-        <a href="index.html" >Home</a>
+        <a href="index.html">Home</a>
         <a href="Skills.html">Skills</a>
         <a href="Experience.html">Experience</a>
         <a href="Certifications.html">Certifications</a>
         <a href="projects.html" class="active">Projects</a>
         <a href="Contact.html">Contact</a>
-        
     </nav>
-        <div id="hamburger" class="hamburger" >&#9776;</div>
-        <nav id="nav-menu">
-            <span id="close-btn" ><i class="fa-solid fa-xmark"></i></span>
-            <a href="index.html" > Home</a>
-            <a href="Skills.html" >Skills</a>
-            <a href="Experience.html" >Experience</a>
-            <a href="Certifications.html">Certifications</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="Contact.html">Contact</a>
-            
-        </nav>
-    </header>
+
+    <div id="hamburger" class="hamburger">&#9776;</div>
+
+    <nav id="nav-menu">
+        <span id="close-btn"><i class="fa-solid fa-xmark"></i></span>
+        <a href="index.html">Home</a>
+        <a href="Skills.html">Skills</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Certifications.html">Certifications</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- PROJECT SECTION (SYNCED WITH CSS) -->
+<!-- PROJECT SECTION -->
 <section class="projects-section">
 
-<h1 class="projects-title">Projects</h1>
+    <h1 class="projects-title">Projects</h1>
 
-<div class="projects-coming">
+    <div class="projects-split">
 
-<i class="fa-solid fa-code"></i>
+        <!-- PROJECT 1 -->
+        <div class="project-card">
 
-<h2>Projects Coming Soon</h2>
+            <h3>AWS Native CI/CD Pipeline with EKS</h3>
 
-<p>
-I am currently working on hands-on DevOps projects involving
-AWS, Docker, Kubernetes, Terraform, and monitoring tools.
-They will be published here soon.
-</p>
+            <div class="project-hidden">
 
-</div>
+                <p>
+                    Built an end-to-end CI/CD pipeline using AWS services to automate
+                    building, pushing, and deploying containerized applications to Amazon EKS.
+                </p>
+
+                <!-- TOOLS -->
+                <p class="label">Tools</p>
+                <p class="tools">
+                    <span>AWS CodePipeline</span>
+                    <span>AWS CodeBuild</span>
+                    <span>Amazon ECR</span>
+                    <span>Amazon EKS</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>IAM</span>
+                </p>
+
+                <!-- PIPELINE -->
+                <p class="label">Pipeline</p>
+                <div class="flow">
+                    <span>GitHub</span>
+                    <span>CodePipeline</span>
+                    <span>CodeBuild</span>
+                    <span>ECR</span>
+                    <span>EKS</span>
+                    <span>Kubernetes Deploy</span>
+                </div>
+
+                <p class="highlight">
+                    Automated Docker image build and push to Amazon ECR, followed by
+                    deployment to Amazon EKS using Kubernetes manifests via CodeBuild.
+                </p>
+
+                <a href="https://github.com/THeInfinityPro/Devops_Projects.git" target="_blank">
+                    <i class="fa-brands fa-github"></i> View Code
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+
+            <h3>DevOps CI/CD Pipeline with Jenkins, Terraform & AWS EKS</h3>
+
+            <div class="project-hidden">
+
+                <p>
+                    Designed and implemented a full DevOps pipeline using Terraform,
+                    Jenkins, Docker, and Kubernetes with monitoring integration.
+                </p>
+
+                <!-- TOOLS -->
+                <p class="label">Tools</p>
+                <p class="tools">
+                    <span>Terraform</span>
+                    <span>AWS EC2</span>
+                    <span>Jenkins</span>
+                    <span>Docker</span>
+                    <span>DockerHub</span>
+                    <span>Amazon EKS</span>
+                    <span>Kubernetes</span>
+                    <span>Prometheus</span>
+                    <span>Grafana</span>
+                    <span>GitHub</span>
+                </p>
+
+                <!-- PIPELINE -->
+                <p class="label">Pipeline</p>
+                <div class="flow">
+                    <span>Terraform</span>
+                    <span>EC2 Setup</span>
+                    <span>Jenkins</span>
+                    <span>Docker Build</span>
+                    <span>DockerHub</span>
+                    <span>EKS</span>
+                    <span>Kubernetes Deploy</span>
+                    <span>Monitoring</span>
+                </div>
+
+                <p class="highlight">
+                    Provisioned infrastructure using Terraform, installed Jenkins & Docker on EC2,
+                    built and pushed Docker images to DockerHub, deployed applications to EKS using Kubernetes YAML,
+                    and monitored performance using Prometheus and Grafana.
+                </p>
+
+                <a href="https://github.com/THeInfinityPro/Devops-Project-2.git" target="_blank">
+                    <i class="fa-brands fa-github"></i> View Code
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 <script src="main.js"></script>
+
 </body>
+</html>
