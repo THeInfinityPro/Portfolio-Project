@@ -17,7 +17,7 @@ document.getElementById("close-btn").onclick = () => {
 const roles = [
 "Desktop Support Engineer",
 "System Administrator",
-"IT Support Engineer",
+"Application Support Engineer",
 "Cloud & DevOps Learner",
 "DevOps Engineer (Aspiring)"
 ];
